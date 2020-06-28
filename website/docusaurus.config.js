@@ -8,7 +8,7 @@ module.exports = {
   baseUrl: "/",
   favicon: "favicon.ico",
   organizationName: "jaco1986",
-  projectName: "shiftm",
+  projectName: "shiftm-support",
   customFields: {
     metadata: require("./metadata"),
   },
