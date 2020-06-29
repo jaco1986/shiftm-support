@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[720],{876:function(s){s.exports=JSON.parse('{"allTagsPath":"/highlights/tags","slug":"source-syslog","name":"source: syslog","count":1,"permalink":"/highlights/tags/source-syslog"}')}}]);

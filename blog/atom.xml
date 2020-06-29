@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://jaco1986.github.io/blog</id>
+    <title>Shift'M Support Blog</title>
+    <updated>2020-04-09T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://jaco1986.github.io/blog"/>
+    <subtitle>Shift'M Support Blog</subtitle>
+    <icon>https://jaco1986.github.io/favicon.ico</icon>
+    <rights>Copyright © 2020 Timber, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[How We Test Vector]]></title>
+        <id>how-we-test-vector</id>
+        <link href="https://jaco1986.github.io/blog/how-we-test-vector"/>
+        <updated>2020-04-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A survey of techniques we've found useful]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Vector]]></title>
+        <id>introducing-vector</id>
+        <link href="https://jaco1986.github.io/blog/introducing-vector"/>
+        <updated>2019-06-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hello World. Bringing Vector to life.]]></summary>
+    </entry>
+</feed>

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[576],{732:function(e){e.exports=JSON.parse('{"allTagsPath":"/highlights/tags","slug":"event-type-log","name":"event type: log","count":1,"permalink":"/highlights/tags/event-type-log"}')}}]);

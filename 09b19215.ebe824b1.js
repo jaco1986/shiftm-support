@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{185:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"source-journald","name":"source: journald","count":26,"permalink":"/guides/tags/source-journald"}')}}]);

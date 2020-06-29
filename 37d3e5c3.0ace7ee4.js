@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[212],{367:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-splunk-hec","name":"sink: splunk_hec","count":10,"permalink":"/guides/tags/sink-splunk-hec"}')}}]);

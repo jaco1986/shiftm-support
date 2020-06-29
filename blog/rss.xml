@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Shift'M Support Blog</title>
+        <link>https://jaco1986.github.io/blog</link>
+        <description>Shift'M Support Blog</description>
+        <lastBuildDate>Thu, 09 Apr 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>Copyright © 2020 Timber, Inc.</copyright>
+        <item>
+            <title><![CDATA[How We Test Vector]]></title>
+            <link>https://jaco1986.github.io/blog/how-we-test-vector</link>
+            <guid>how-we-test-vector</guid>
+            <pubDate>Thu, 09 Apr 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[A survey of techniques we've found useful]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Introducing Vector]]></title>
+            <link>https://jaco1986.github.io/blog/introducing-vector</link>
+            <guid>introducing-vector</guid>
+            <pubDate>Fri, 28 Jun 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hello World. Bringing Vector to life.]]></description>
+        </item>
+    </channel>
+</rss>

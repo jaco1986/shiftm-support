@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[484],{640:function(n){n.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-logdna","name":"sink: logdna","count":10,"permalink":"/guides/tags/sink-logdna"}')}}]);

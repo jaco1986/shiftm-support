@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[267],{422:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-datadog-metrics","name":"sink: datadog_metrics","count":3,"permalink":"/guides/tags/sink-datadog-metrics"}')}}]);

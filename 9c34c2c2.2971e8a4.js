@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[599],{755:function(s){s.exports=JSON.parse('{"allTagsPath":"/highlights/tags","slug":"transform-swimlanes","name":"transform: swimlanes","count":2,"permalink":"/highlights/tags/transform-swimlanes"}')}}]);

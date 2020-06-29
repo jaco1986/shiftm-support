@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{163:function(a){a.exports=JSON.parse('{"allTagsPath":"/highlights/tags","slug":"transform-tag-cardinality-limit","name":"transform: tag_cardinality_limit","count":1,"permalink":"/highlights/tags/transform-tag-cardinality-limit"}')}}]);

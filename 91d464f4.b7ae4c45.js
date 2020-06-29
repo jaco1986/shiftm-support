@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[560],{716:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-new-relic-logs","name":"sink: new_relic_logs","count":10,"permalink":"/guides/tags/sink-new-relic-logs"}')}}]);

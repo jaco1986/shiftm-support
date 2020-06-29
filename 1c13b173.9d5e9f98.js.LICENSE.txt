@@ -1,0 +1,17 @@
+/*!
+ * Adapted from jQuery UI core
+ *
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/ui-core/
+ */
+
+/*!
+ * github-buttons v2.7.0
+ * (c) 2020 なつき
+ * @license BSD-2-Clause
+ */
