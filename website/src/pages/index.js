@@ -1,137 +1,111 @@
-import React, { useState, useEffect } from 'react';
-
-import Heading from '@theme/Heading';
-import InstallationCommand from '@site/src/components/InstallationCommand';
-import Jump from '@site/src/components/Jump';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import SVG from 'react-inlinesvg';
-import TabItem from '@theme/TabItem';
-import Tabs from '@theme/Tabs';
-
+import React from 'react';
 import classnames from 'classnames';
-import {fetchNewHighlight} from '@site/src/exports/newHighlight';
-import {fetchNewPost} from '@site/src/exports/newPost';
-import {fetchNewRelease} from '@site/src/exports/newRelease';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import repoUrl from '@site/src/exports/repoUrl';
+import { FiSettings, FiArchive, FiLink, FiUser} from 'react-icons/fi';
+import { FaCalendarDay, FaWallet} from "react-icons/fa";
+import Layout from '@theme/Layout';
+import { MotionLayoutProvider } from 'react-motion-layout';
+import Button from './components/Button';
+import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
-import _ from 'lodash';
-import styles from './index.module.css';
 
-import './index.css';
-
-const AnchoredH2 = Heading('h2');
 
 const features = [
+
   {
-    title: 'Fast. Really.',
-    icon: 'zap',
+    title: 'Profile',
+    icon: <FiUser size="45" />,
     description: (
       <>
-        Built in <a href="https://www.rust-lang.org/">Rust</a>, Vector is <a href="#performance">blistering fast and
-        memory efficient</a>. It's designed to handle the most demanding environments.
+      Create your <Link to="/docs/about/guarantees/">Account</Link> and set your <Link to="/docs/about/guarantees/">profile picture</Link>. Upload your <Link to="/docs/about/guarantees/">verification documents</Link>,
+      learn about our <Link to="/docs/about/guarantees/">trust and verification</Link> process, view your <Link to="/docs/about/guarantees/">reviews</Link> or read your <Link to="/docs/about/guarantees/">messages</Link>.
       </>
     ),
   },
   {
-    title: 'Vendor Neutral',
-    icon: 'unlock',
+    title: 'Shifts',
+    icon: <FaCalendarDay size="45" />,
     description: (
       <>
-        Vector does not favor any storage and fosters a fair, open ecosystem with your best interest in mind. Lock-in free and future proof.
+      <Link to="/docs/about/guarantees/">Add</Link> or <Link to="/docs/about/guarantees/">Edit</Link> a new <Link to="/docs/about/guarantees/">listing</Link> and how to <Link to="/docs/about/guarantees/">publish</Link> it. Learn how to set your <Link to="/docs/about/guarantees/">rates</Link>,  <Link to="/docs/about/guarantees/">dates and times</Link> you want to using from your <Link to="/docs/about/guarantees/">calendar</Link>.
+      View <Link to="/docs/about/guarantees/">previous</Link> or <Link to="/docs/about/guarantees/">upcoming</Link> Shift information or download and view your <Link to="/docs/about/guarantees/">invoices</Link>
       </>
     ),
   },
   {
-    title: 'One Tool',
-    icon: 'codepen',
+    title: 'Settings',
+    icon: <FiSettings size="45" />,
     description: (
       <>
-        Vector aims to be the single, and only, tool needed to get data from A to B, <Link to="/docs/setup/deployment/">deploying</Link> as an <Link to="/docs/setup/deployment/strategies/#daemon">daemon</Link>, <Link to="/docs/setup/deployment/strategies/#sidecar">sidecar</Link>, or <Link to="/docs/setup/deployment/strategies/#service">service</Link>.
+      Learn how to change your <Link to="/docs/about/guarantees/">language</Link> preferences or your payment <Link to="/docs/about/guarantees/">currency</Link>.
+      Need help with changing your <Link to="/docs/about/guarantees/">password</Link>? View your <Link to="/docs/about/guarantees/">dashboard</Link> and find your <Link to="/docs/about/guarantees/">favorite</Link> locums.
+
       </>
     ),
-  },
-  {
-    title: 'All Data',
-    icon: 'shuffle',
+  },{
+    title: 'Payments',
+    icon: <FaWallet size="45" />,
     description: (
       <>
-        Vector supports <Link to="/docs/about/data-model/log/">logs</Link>, <Link to="/docs/about/data-model/metric/">metrics</Link>, and <Link to="/docs/about/data-model/#event">events</Link>, making it easy to collect and process <i>all</i> observability data.
-      </>
-    ),
-  },
-  {
-    title: 'Programmable Transforms',
-    icon: 'code',
-    description: (
-      <>
-        <Link to="/components/?functions[]=program">Programmable transforms</Link> give you the full power of programmable runtimes. Handle complex use cases without limitation.
-      </>
-    ),
-  },
-  {
-    title: 'Clear Guarantees',
-    icon: 'shield',
-    description: (
-      <>
-        Guarantees matter, and Vector is <Link to="/docs/about/guarantees/">clear on it's guarantees</Link>, helping you to make the appropriate trade offs for your use case.
+      Set your <Link to="/docs/about/guarantees/">bank account</Link> information in order to receive <Link to="/docs/about/guarantees/">payouts</Link> . View or <Link to="/docs/about/guarantees/">export</Link>  your <Link to="/docs/about/guarantees/">completed</Link>  and <Link to="/docs/about/guarantees/">future</Link>  transactions or download an <Link to="/docs/about/guarantees/">invoice</Link>.
+We calculate your <Link to="/docs/about/guarantees/">gross earnings</Link> so you don’t have to.
       </>
     ),
   },
 ];
 
-function Features({features}) {
-  let rows = [];
-
-  let i,j,temparray,chunk = 3;
-  for (i=0,j=features.length; i<j; i+=chunk) {
-    let featuresChunk = features.slice(i,i+chunk);
-
-    rows.push(
-      <div key={`features${i}`} className="row">
-        {featuresChunk.map((props, idx) => (
-          <Feature key={idx} {...props} />
-        ))}
-      </div>
-    );
-  }
-
+function Feature({ title, description, icon }) {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <AnchoredH2 id="features">Why Shift'M?</AnchoredH2>
-        {rows}
+    <div className={classnames('col col--4 w-full lg:w-1/3 p-4 lg:pt-8 pb-2 lg:border border-gray-200 lg:shadow-sm lg:mr-2 rounded-lg flex flex-col items-center lg:ml-2 text-center', styles.feature)}>
+      <div className="pb-4 primary opacity-50">
+        { icon }
       </div>
-    </section>
-  );
-}
-
-function Feature({icon, title, description}) {
-  return (
-    <div className={classnames('col col--4', styles.feature)}>
-      <div className={styles.featureIcon}>
-        <i className={classnames('feather', `icon-${icon}`)}></i>
-      </div>
-      <h3>{title}</h3>
+      <h3 className="baloo">{title}</h3>
       <p>{description}</p>
     </div>
   );
 }
 
+
 function Home() {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
-  const {metadata: {latest_release}} = siteConfig.customFields;
-
-
-
   return (
-    <Layout title={`${siteConfig.title} - ${siteConfig.tagline}`} description={siteConfig.tagline}>
-      <main>
-        {features && features.length && <Features features={features} />}
-      </main>
+    <Layout
+      title="React hero animations"
+      description="Create beautiful immersive React hero animations."
+    >
+      <MotionLayoutProvider>
+        <header className="bg-gray-200 xl:min-h-screen">
+          <div className="flex w-full justify-between flex-col lg:flex-row">
+            <div className="w-full lg:w-1/2 md:ml-8 xl:ml-16 ml-0 lg:mt-20 xl:mt-48 p-10 lg:p-0">
+              <div className="text-5xl baloo font-bold primary leading-tight">Welcome to Shift'M Help Centre</div>
+              <div className="text-4xl text-gray-500 mt-4 leading-tight">
+                Have a question or need guidance with something? We're here to help.
+              </div>
+              <div className="mt-12">
+                <Button to="/docs/installation">
+                  Get Started
+                </Button>
+              </div>
+            </div>
+          </div>
+
+        </header>
+        <main>
+          {features && features.length && (
+            <section className={styles.features}>
+              <div className="container lg:pt-12">
+                <div className="flex flex-col lg:flex-row">
+                  {features.map((props, idx) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <Feature key={idx} {...props} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+        </main>
+      </MotionLayoutProvider>
     </Layout>
   );
 }

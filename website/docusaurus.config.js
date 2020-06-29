@@ -1,46 +1,43 @@
-const path = require("path");
-
 module.exports = {
-  title: "Shift'M Support",
-  tagline:
-    "How can we help you?",
-  url: "https://jaco1986.github.io",
-  baseUrl: "/",
-  favicon: "favicon.ico",
-  organizationName: "jaco1986",
-  projectName: "shiftm-support",
-  customFields: {
-    metadata: require("./metadata"),
-  },
+  title: "Help Center - Shift'M",
+  tagline: "How may Shift'M Help you?",
+  url: 'https://jaco1986.github.io',
+  baseUrl: '/',
+  favicon: 'img/favicon.ico',
+  organizationName: 'jaco1986', // Usually your GitHub org/user name.
+  projectName: 'shiftm-support', // Usually your repo name.
   themeConfig: {
+    googleAnalytics: {
+      trackingID: 'UA-56940433-12',
+    },
+
+    disableDarkMode: true,
     navbar: {
-      hideOnScroll: true,
+      title: "Help Center",
       logo: {
-        alt: "Shift'M",
-        src: "img/shiftm.svg",
+        alt: 'Help Centre',
+        src: 'img/logo.png',
       },
       links: [
         { to: "guides/", label: "Guides", position: "left" },
-        { to: "docs/", label: "Docs", position: "left" },
-        { to: "highlights/", label: "Highlights", position: "right" },
-        { to: "community/", label: "Community", position: "right" },
-        { to: "releases/", label: "Download", position: "right" },
         {
-          href: "https://github.com/timberio/vector",
-          label: "GitHub",
-          position: "right",
+          to: 'docs/installation',
+          activeBasePath: 'docs',
+          label: 'Docs',
+          position: 'left',
+        },
+        {
+          href: 'https://www.shiftm.com',
+          label: 'Sign Up',
+          position: 'right',
         },
       ],
     },
-    image: "img/open-graph.png",
-    prism: {
-      theme: require("prism-react-renderer/themes/github"),
-      darkTheme: require("prism-react-renderer/themes/dracula"),
-    },
     footer: {
+      style: 'dark',
       links: [
         {
-          title: "About",
+          title: 'About',
           items: [
             {
               label: "What is Shift'M?",
@@ -54,23 +51,28 @@ module.exports = {
               label: "Contact Us",
               to: "https://shiftm.com/contact",
             },
+            {
+              label: "Mailing List",
+              to: "mailing_list/",
+            },
           ],
         },
-          {
-            title: 'Mobile',
-            items: [
-              {
-                label: 'App Store',
-                href: 'https://www.apple.com/ios/app-store',
-              },
-              {
-                label: 'Play Store',
-                href: 'https://play.google.com/store?hl=en',
-              },
+        {
+          title: 'Mobile',
+          items: [
+            {
+              label: 'App Store',
+              href: 'https://www.apple.com/ios/app-store',
+            },
+            {
+              label: 'Play Store',
+              href: 'https://play.google.com/store?hl=en',
+            },
 
-            ],
-          },
-        {title: "Community",
+          ],
+        },
+        {
+          title: 'Community',
           items: [
             {
               label: 'Facebook',
@@ -88,62 +90,30 @@ module.exports = {
               label: 'LinkedIn',
               href: 'https://linkedIn.com/company/Shift-m',
             },
-            {
-              label: "Mailing List",
-              to: "mailing_list/",
-            },
           ],
         },
       ],
-      logo: {
-        alt: "Shift'M",
-        src: "/img/shiftm.png",
-        href: "https://shiftm.com",
-      },
-      copyright: `Copyright © ${new Date().getFullYear()} Shift'M B.V`,
-    },
-    algolia: {
-      apiKey: "cbdca4d7c6325925f3327e41109d1e50",
-      indexName: "shiftm",
-      algoliaOptions: {}, // Optional, if provided by Algolia
+      copyright: `Copyright © ${new Date().getFullYear()} Shift'M.`,
     },
   },
-  presets: [],
-  plugins: [
+  presets: [
     [
-      "@docusaurus/plugin-content-docs",
+      '@docusaurus/preset-classic',
       {
-        editUrl: "https://github.com/timberio/vector/edit/master/website/",
-        sidebarPath: require.resolve("./sidebars.js"),
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        feedOptions: {
-          type: "all",
-          copyright: `Copyright © ${new Date().getFullYear()} Timber, Inc.`,
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
-    path.resolve(__dirname, "./plugins/guides"),
-    path.resolve(__dirname, "./plugins/highlights"),
-    ["@docusaurus/plugin-content-pages", {}],
-    path.resolve(__dirname, "./plugins/releases"),
-    [path.resolve(__dirname, "./plugins/sitemap"), {}],
   ],
-  scripts: [],
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Ubuntu|Roboto|Source+Code+Pro",
-    "https://at-ui.github.io/feather-font/css/iconfont.css",
+    'https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css',
+    'https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap',
   ],
-  themes: [
-    [
-      "@docusaurus/theme-classic",
-      {
-        customCss: require.resolve("./src/css/custom.css"),
-      },
-    ],
-    "@docusaurus/theme-search-algolia",
-  ],
+  plugins: ['@docusaurus/plugin-google-analytics'],
 };
