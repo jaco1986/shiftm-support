@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[293],{448:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-clickhouse","name":"sink: clickhouse","count":10,"permalink":"/guides/tags/sink-clickhouse"}')}}]);

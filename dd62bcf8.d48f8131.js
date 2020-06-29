@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[836],{995:function(s){s.exports=JSON.parse('{"allTagsPath":"/highlights/tags","slug":"source-udp","name":"source: udp","count":1,"permalink":"/highlights/tags/source-udp"}')}}]);

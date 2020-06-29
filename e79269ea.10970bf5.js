@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[876],{1035:function(a){a.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"platform-docker","name":"platform: docker","count":25,"permalink":"/guides/tags/platform-docker"}')}}]);

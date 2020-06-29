@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[769],{928:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-aws-cloudwatch-logs","name":"sink: aws_cloudwatch_logs","count":10,"permalink":"/guides/tags/sink-aws-cloudwatch-logs"}')}}]);

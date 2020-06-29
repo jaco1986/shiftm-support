@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[66],{217:function(s){s.exports=JSON.parse('{"allTagsPath":"/guides/tags","slug":"sink-socket","name":"sink: socket","count":10,"permalink":"/guides/tags/sink-socket"}')}}]);

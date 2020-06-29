@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[160],{315:function(a){a.exports=JSON.parse('{"allTagsPath":"/highlights/tags","slug":"type-breaking-change","name":"type: breaking change","count":16,"permalink":"/highlights/tags/type-breaking-change"}')}}]);
